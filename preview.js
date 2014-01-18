@@ -3,5 +3,9 @@ var app = express();
 
 app.use(express.static(__dirname + '/dist'));
 
-app.listen(3000);
-console.log('Listening on port 3000.');
+module.exports = {
+	listen: function(port) {
+		app.listen(port);
+		console.log('Listening on port %s.', port.toString())
+	}
+};

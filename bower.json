@@ -1,6 +1,7 @@
 {
   "name": "tott-gulpjs",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Simple example project for the gulpjs TotT session.",
   "authors": [
     "Coalman <tehcoalman@gmail.com>"
   ],
