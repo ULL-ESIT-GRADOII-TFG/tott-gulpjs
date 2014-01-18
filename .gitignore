@@ -1,0 +1,6 @@
+node_modules
+dist
+
+# TODO: remove later
+gulpfile.js
+package.json
