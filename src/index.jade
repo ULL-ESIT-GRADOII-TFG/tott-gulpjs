@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+	head
+		title= title || 'About Me'
+		link(rel='stylesheet', href='vendor/bootstrap.css')
+	body
+		.container
+			h1= name || 'You should specify your name'
+			
+			- portrait = portrait || 'http://goo.gl/MFTWqX'
+			img.img-thumbnail(src='#{portrait}', alt='Portrait Image')
+
+			:markdown
+				[markdown]: http://daringfireball.net/projects/markdown/
+				
+				The elements below are generated from [markdown]!
+
+				Feel free to edit the `src/index.jade` file to insert a little 
+				blurb about yourself here!
