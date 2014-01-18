@@ -2,7 +2,3 @@ node_modules
 bower_components
 src/vendor
 dist
-
-# TODO: remove later
-gulpfile.js
-package.json

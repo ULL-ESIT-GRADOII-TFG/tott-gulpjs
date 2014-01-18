@@ -1,0 +1,17 @@
+{
+  "name": "tott-gulpjs",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Michael Coleman",
+  "private": true,
+  "dependencies": {
+    "gulp": "~3.4.0",
+    "gulp-util": "~2.2.12",
+    "gulp-jade": "~0.3.0",
+    "gravatar": "~1.0.6",
+    "gulp-livereload": "~0.2.0",
+    "tiny-lr": "0.0.5",
+    "express": "~3.4.8",
+    "markdown": "~0.5.0"
+  }
+}
