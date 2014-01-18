@@ -1,0 +1,11 @@
+{
+  "name": "tott-gulpjs",
+  "version": "0.0.0",
+  "authors": [
+    "Coalman <tehcoalman@gmail.com>"
+  ],
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  }
+}
