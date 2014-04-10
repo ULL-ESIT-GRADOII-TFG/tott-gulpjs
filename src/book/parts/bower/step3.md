@@ -40,3 +40,6 @@ creating a `.bowerrc` file with the following contents:
 	"directory": "src/public/vendor"
 }
 ```
+
+Running a `bower install` will put our dependencies in a more conveniant
+place.

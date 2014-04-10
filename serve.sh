@@ -1,3 +1,3 @@
 #! /bin/sh
 
-gitbook serve ./src
+gitbook serve ./src/book

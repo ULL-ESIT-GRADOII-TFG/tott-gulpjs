@@ -1,0 +1,25 @@
+include includes/layout
+
+block content
+	.container.text-center
+		h1= name || 'Pleasant Domo'
+		
+		- portrait = portrait || 'http://goo.gl/MFTWqX'
+		img.img-thumbnail(src='#{portrait}', alt='Portrait Image')
+
+		:markdown
+			[markdown]: http://daringfireball.net/projects/markdown/
+			
+			The elements below are generated from [markdown]!
+
+			Feel free to edit the `src/index.jade` file to insert a little 
+			blurb about yourself here!
+
+		a(href='about.html') What is this?
+
+	.container.text-center
+		div.btn-group
+			a.btn.btn-default(href='#{github}')
+				i.fa.fa-github-alt
+			a.btn.btn-default(href='mailto:#{email}')
+				i.fa.fa-envelope

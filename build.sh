@@ -1,3 +1,3 @@
 #! /bin/sh
 
-gitbook build ./src -o ./book
+gitbook build ./src/book -o ./book
