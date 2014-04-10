@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>gulp | Tott-gulpjs</title>
+        <title>Step 3: Configure Bower | Tott-gulpjs</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../../parts/gulp/step1.html" />
+        <link rel="next" href="../../parts/gulp/README.html" />
         
         
-        <link rel="prev" href="../../parts/bower/step3.html" />
+        <link rel="prev" href="../../parts/bower/step2.html" />
         
 
-        <meta property="og:title" content="gulp | Tott-gulpjs">
+        <meta property="og:title" content="Step 3: Configure Bower | Tott-gulpjs">
         <meta property="og:site_name" content="Tott-gulpjs">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -40,7 +40,7 @@
     </head>
     <body>
         
-<div class="book" data-github="Coalman/tott-gulpjs" data-level="3" data-basepath="../.." data-revision="1397162844657">
+<div class="book" data-github="Coalman/tott-gulpjs" data-level="2.3" data-basepath="../.." data-revision="1397162844657">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="https://github.com/Coalman/tott-gulpjs" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
@@ -72,7 +72,7 @@
             <a href="https://github.com/Coalman/tott-gulpjs/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/Coalman/tott-gulpjs/edit/master/parts/gulp/README.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/Coalman/tott-gulpjs/edit/master/parts/bower/step3.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         <li data-level="0" data-path="index.html">
@@ -186,7 +186,7 @@
             <div class="page-wrapper">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 54.54545454545455%;min-width: 45.45454545454545%;"></div>
+        <div class="inner" style="width: 45.45454545454545%;min-width: 36.36363636363637%;"></div>
     </div>
     <div class="chapters">
     
@@ -202,7 +202,7 @@
     
         <a href="../../parts/bower/step3.html" title="Step 3: Configure Bower" class="chapter done " data-progress="2.3" style="left: 45.45454545454545%;"></a>
     
-        <a href="../../parts/gulp/README.html" title="gulp" class="chapter done new-chapter" data-progress="3" style="left: 54.54545454545455%;"></a>
+        <a href="../../parts/gulp/README.html" title="gulp" class="chapter  new-chapter" data-progress="3" style="left: 54.54545454545455%;"></a>
     
         <a href="../../parts/gulp/step1.html" title="Step 1: Install Gulp" class="chapter  " data-progress="3.1" style="left: 63.63636363636363%;"></a>
     
@@ -219,15 +219,50 @@
 
                 <div class="page-inner">
                 
+                    <section class="normal" id="section-gitbook_5">
+                    
+                        <h1 id="step-3-configure-bower">Step 3: Configure Bower</h1>
+<p>In the last step, you installed some dependencies using bower. However, 
+there are a few problems with this approach:</p>
+<ul>
+<li>We don&#39;t want to add these dependencies to our git history</li>
+<li>There isn&#39;t much of a record of the installs or any control over 
+the specific version installed</li>
+<li>Do we really want the dependencies in a <code>bower_components</code> directory</li>
+</ul>
+<p>To rectify these issues, we will create a bower manifest. Enter the 
+following:</p>
+<pre><code><span class="hljs-comment"># this command will bring up a wizard</span>
+<span class="hljs-variable">$ </span>bower init
+</code></pre><p>Now, you should have a <code>bower.json</code> file. Study the contents, they are 
+for the most part self-explanatory. Now, the next step is to add 
+dependencies to the <code>bower.json</code> file. Run the commands from step 2,
+but this time use the <code>--save</code> option:</p>
+<pre><code><span class="hljs-comment">$</span> <span class="hljs-comment">bower</span> <span class="hljs-comment">install</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">save</span> <span class="hljs-comment">bootstrap</span>
+<span class="hljs-comment">$</span> <span class="hljs-comment">bower</span> <span class="hljs-comment">install</span> <span class="hljs-literal">-</span><span class="hljs-literal">-</span><span class="hljs-comment">save</span> <span class="hljs-comment">fontawesome</span>
+</code></pre><p>You should notice that our bower manifest now has the dependencies 
+and their version numbers. You could write the manifest by hand, but 
+these shell commands tend to be faster.</p>
+<p>The last part of this step deals with the last problem in this approach:
+do we really want the dependencies in a <code>bower_components</code> directory. To 
+change where <code>bower</code> installs dependencies, we need to configure bower by
+creating a <code>.bowerrc</code> file with the following contents:</p>
+<pre><code>{
+    "<span class="hljs-attribute">directory</span>": <span class="hljs-value"><span class="hljs-string">"src/public/vendor"</span>
+</span>}
+</code></pre>
+                    
+                    </section>
+                
                 </div>
             </div>
         </div>
 
         
-        <a href="../../parts/bower/step3.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../../parts/bower/step2.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../../parts/gulp/step1.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../../parts/gulp/README.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
