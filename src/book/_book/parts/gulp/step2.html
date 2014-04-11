@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Install Bower | Tott-gulpjs</title>
+        <title>Writing tasks | Tott-gulpjs</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,11 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../../parts/bower/step2.html" />
         
-        
-        <link rel="prev" href="../../parts/bower/README.html" />
+        <link rel="prev" href="../../parts/gulp/step1.html" />
         
 
-        <meta property="og:title" content="Install Bower | Tott-gulpjs">
+        <meta property="og:title" content="Writing tasks | Tott-gulpjs">
         <meta property="og:site_name" content="Tott-gulpjs">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -40,7 +38,7 @@
     </head>
     <body>
         
-<div class="book" data-github="Coalman/tott-gulpjs" data-level="2.1" data-basepath="../.." data-revision="1397238902558">
+<div class="book" data-github="Coalman/tott-gulpjs" data-level="3.2" data-basepath="../.." data-revision="1397238905051">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="https://github.com/Coalman/tott-gulpjs" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
@@ -72,7 +70,7 @@
             <a href="https://github.com/Coalman/tott-gulpjs/issues" target="blank">Questions and Issues</a>
         </li>
         <li>
-            <a href="https://github.com/Coalman/tott-gulpjs/edit/master/parts/bower/step1.md" target="blank">Edit and Contribute</a>
+            <a href="https://github.com/Coalman/tott-gulpjs/edit/master/parts/gulp/step2.md" target="blank">Edit and Contribute</a>
         </li>
         <li class="divider"></li>
         <li data-level="0" data-path="index.html">
@@ -162,7 +160,7 @@
             <div class="page-wrapper">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 37.5%;min-width: 25%;"></div>
+        <div class="inner" style="width: 100%;min-width: 87.5%;"></div>
     </div>
     <div class="chapters">
     
@@ -174,33 +172,62 @@
     
         <a href="../../parts/bower/step1.html" title="Install Bower" class="chapter done " data-progress="2.1" style="left: 37.5%;"></a>
     
-        <a href="../../parts/bower/step2.html" title="Install some Dependencies" class="chapter  " data-progress="2.2" style="left: 50%;"></a>
+        <a href="../../parts/bower/step2.html" title="Install some Dependencies" class="chapter done " data-progress="2.2" style="left: 50%;"></a>
     
-        <a href="../../parts/bower/step3.html" title="Configure Bower" class="chapter  " data-progress="2.3" style="left: 62.5%;"></a>
+        <a href="../../parts/bower/step3.html" title="Configure Bower" class="chapter done " data-progress="2.3" style="left: 62.5%;"></a>
     
-        <a href="../../parts/gulp/README.html" title="gulp" class="chapter  new-chapter" data-progress="3" style="left: 75%;"></a>
+        <a href="../../parts/gulp/README.html" title="gulp" class="chapter done new-chapter" data-progress="3" style="left: 75%;"></a>
     
-        <a href="../../parts/gulp/step1.html" title="Install Gulp" class="chapter  " data-progress="3.1" style="left: 87.5%;"></a>
+        <a href="../../parts/gulp/step1.html" title="Install Gulp" class="chapter done " data-progress="3.1" style="left: 87.5%;"></a>
     
-        <a href="../../parts/gulp/step2.html" title="Writing tasks" class="chapter  " data-progress="3.2" style="left: 100%;"></a>
+        <a href="../../parts/gulp/step2.html" title="Writing tasks" class="chapter done " data-progress="3.2" style="left: 100%;"></a>
     
     </div>
 </div>
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_3">
+                    <section class="normal" id="section-gitbook_8">
                     
-                        <h1 id="step-1-install-bower">Step 1: Install Bower</h1>
-<p>The first step is to install <a href="http://nodejs.org/" target="_blank">node.js</a>. Use your 
-distribution&#39;s package manager or download the installer if you&#39;re on 
-Windows.</p>
-<p>After installing <code>node.js</code>, we need to install <code>bower</code>. You can use <code>npm</code> 
-to install <code>bower</code>:</p>
-<pre><code>$ npm install --global bower
-<span class="hljs-preprocessor"># you can run the following <span class="hljs-keyword">line</span> to test <span class="hljs-keyword">if</span> bower installed correctly</span>
-$ bower -h
-</code></pre>
+                        <h1 id="define-some-tasks">Define some tasks</h1>
+<p>The first step is to create a <code>gulpfile.js</code> at the root of the 
+project with the following contents:</p>
+<pre><code><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp'</span>),
+    preview = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./preview'</span>);
+
+gulp.task(<span class="hljs-string">'build'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// build jade templates</span>
+    <span class="hljs-comment">// build less files</span>
+    <span class="hljs-comment">// copy any assets we need to the output dir</span>
+});
+
+gulp.task(<span class="hljs-string">'serve'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+    <span class="hljs-comment">// start up the preview server</span>
+    preview.serve(<span class="hljs-number">3434</span>, <span class="hljs-string">'../'</span>);
+
+    <span class="hljs-comment">// watch for file changes</span>
+});
+
+gulp.task(<span class="hljs-string">'default'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+
+});
+</code></pre><p>Now, it&#39;s time to write the code for these different tasks.</p>
+<h2 id="jade-templates">Jade Templates</h2>
+<p>Install the <a href="https://www.npmjs.org/package/gulp-jade" target="_blank">gulp-jade</a> plugin.
+The readme has plenty of information for implementing this build step in
+the build task.</p>
+<h2 id="less-files">Less files</h2>
+<p>Simply put, Less is a css preprocessor. It extends the css language with 
+a few features, like variables and mixins.</p>
+<p>Install the <a href="https://www.npmjs.org/package/gulp-less" target="_blank">gulp-less</a> plugin.
+Put this code below the code for the jade templates.</p>
+<h2 id="livereload">Livereload</h2>
+<p>Livereload watches for changes in your files and then refreshes your 
+browsers view of them. This step requires that you install a browser 
+plugin to see the reloads.</p>
+<p>Install the <a href="https://www.npmjs.org/package/gulp-livereload" target="_blank">gulp-livereload</a>
+plugin. Put this code at the bottom of the <code>serve</code> task.</p>
+
                     
                     </section>
                 
@@ -209,10 +236,8 @@ $ bower -h
         </div>
 
         
-        <a href="../../parts/bower/README.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../../parts/gulp/step1.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
-        
-        <a href="../../parts/bower/step2.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

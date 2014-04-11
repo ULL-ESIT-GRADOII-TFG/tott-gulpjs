@@ -37,7 +37,7 @@ creating a `.bowerrc` file with the following contents:
 
 ```
 {
-	"directory": "src/public/vendor"
+	"directory": "src/vendor"
 }
 ```
 
