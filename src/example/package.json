@@ -12,6 +12,10 @@
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",
     "express": "~3.4.8",
-    "markdown": "~0.5.0"
+    "markdown": "~0.5.0",
+    "gulp-jshint": "^1.5.3",
+    "gulp-less": "^1.2.3",
+    "jshint-stylish": "^0.1.5",
+    "gulp-imagemin": "^0.2.0"
   }
 }

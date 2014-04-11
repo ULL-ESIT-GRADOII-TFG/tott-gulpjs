@@ -1,25 +1,26 @@
+- title = 'About #{nickname}'
 include includes/layout
 
 block content
-	.container.text-center
-		h1= name || 'Pleasant Domo'
-		
-		- portrait = portrait || 'http://goo.gl/MFTWqX'
-		img.img-thumbnail(src='#{portrait}', alt='Portrait Image')
+	.header
+		img.logo(src='/img/tinder.png')
+
+	.card
+		.card-body
+			p.name
+				b #{name}
+			img.portrait(src='#{portrait}')
+			.caption
+				:markdown
+					*"You had me at 'hello world'!"*
+
+	.choices
+		a.round-btn(href='https://github.com/#{github}')
+			i.fa-times
+		a.round-btn(href='https://github.com/#{github}')
+			i.fa-info
+		a.round-btn(href='https://github.com/#{github}')
+			i.fa-heart
 
 		:markdown
-			[markdown]: http://daringfireball.net/projects/markdown/
-			
-			The elements below are generated from [markdown]!
-
-			Feel free to edit the `src/index.jade` file to insert a little 
-			blurb about yourself here!
-
-		a(href='about.html') What is this?
-
-	.container.text-center
-		div.btn-group
-			a.btn.btn-default(href='#{github}')
-				i.fa.fa-github-alt
-			a.btn.btn-default(href='mailto:#{email}')
-				i.fa.fa-envelope
+			[What is this?](https://github.com/#{github})

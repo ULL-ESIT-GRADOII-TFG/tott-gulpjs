@@ -1,0 +1,98 @@
+@import "../vendor/bootstrap/less/bootstrap.less";
+@import "../vendor/fontawesome/less/font-awesome.less";
+
+@color-bittersweet: #382112;
+@color-brownie: #5E2E0D;
+@color-cream: #FCFBE3;
+@color-frosting: #BFA789;
+@color-chips: #9C6B41;
+
+@c-queue: #E4E1DA;
+@c-coral: #EA5C36;
+@c-blackish: #343434;
+
+@body-bg: @c-queue;
+@text-color: @c-blackish;
+@brand-primary: @c-coral;
+
+@container-tablet: 400px;
+@container-desktop: @container-tablet;
+@container-large-desktop: @container-tablet;
+
+.header {
+	.container();
+	.text-center();
+
+	.logo {
+		
+	}
+}
+
+.card {
+	.panel();
+	.panel-default();
+
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	height: 400px;
+}
+
+.card-body {
+	.panel-body();
+	.text-center();
+
+	padding: 0;
+
+	.name {
+		text-align: left;
+		margin-left: 40px;
+		margin-bottom: 5px;
+	}
+	
+	.portrait {
+		.img-rounded();
+		width: 320px;
+		height: 320px;
+	}
+
+	.caption {
+		margin-top: 10px;
+	}
+}
+
+.choices {
+	.text-center();
+}
+
+.round-btn {
+	.btn();
+	.btn-default();
+
+	min-width: 50px;
+	margin-right: 10px;
+	margin-left: 10px;
+	display: inline-block;
+	vertical-align: middle;
+
+    .fa-heart {
+    	.fa();
+    	.fa-lg();
+    	line-height: inherit;
+		color: green;
+	}
+	.fa-info {
+		.fa();
+		.fa-lg();
+		line-height: inherit;
+		color: blue;
+	}
+	.fa-times {
+		.fa();
+		.fa-lg();
+		line-height: inherit;
+		color: red;
+	}
+}

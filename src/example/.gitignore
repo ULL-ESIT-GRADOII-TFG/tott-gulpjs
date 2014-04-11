@@ -1,0 +1,5 @@
+# bower components
+src/vendor
+
+# node
+node_modules
