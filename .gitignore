@@ -1,4 +1,6 @@
+# node
 node_modules
+
+# bower
 bower_components
 src/vendor
-dist

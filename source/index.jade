@@ -5,7 +5,7 @@ block content
 		h1= name || 'Pleasant Domo'
 		
 		- portrait = portrait || 'http://goo.gl/MFTWqX'
-		img.img-thumbnail(src='#{portrait}', alt='Portrait Image')
+		img.portrait(src='#{portrait}', alt='Portrait Image')
 
 		:markdown
 			[markdown]: http://daringfireball.net/projects/markdown/
@@ -21,5 +21,8 @@ block content
 		div.btn-group
 			a.btn.btn-default(href='#{github}')
 				i.fa.fa-github-alt
+			if gplus
+				a.btn.btn-default(href='#{gplus}')
+					i.fa.fa-google-plus
 			a.btn.btn-default(href='mailto:#{email}')
 				i.fa.fa-envelope
